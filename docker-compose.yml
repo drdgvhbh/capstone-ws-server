@@ -1,0 +1,11 @@
+version: "2.1"
+
+services:
+  capstone-ws-server:
+    image: capstone-ws-server
+    build: .
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+    ports:
+      - 8080:8080
